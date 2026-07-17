@@ -1,18 +1,7 @@
-import { createContext, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { fetchPodcasts } from "../api/fetchPata";
-
-export const PodcastContext = createContext();
-
-export const SORT_OPTIONS = [
-  { key: "default", label: "Default" },
-  { key: "date-desc", label: "Newest" },
-  { key: "date-asc", label: "Oldest" },
-  { key: "title-asc", label: "Title A-Z" },
-  { key: "title-desc", label: "Title Z-A" },
-];
-
-const FAVOURITES_KEY = "djspp:favourites";
-const THEME_KEY = "djspp:theme";
+import { SORT_OPTIONS, FAVOURITES_KEY, THEME_KEY } from "./podcastConstants";
+import { PodcastContext } from "./podcastContextDef";
 
 function readStorage(key, fallback) {
   try {
@@ -163,3 +152,5 @@ export function PodcastProvider({ children }) {
 
   return <PodcastContext.Provider value={value}>{children}</PodcastContext.Provider>;
 }
+
+export { PodcastContext };

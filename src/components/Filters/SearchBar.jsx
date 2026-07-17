@@ -13,7 +13,7 @@ export default function SearchBar() {
   useEffect(() => {
     const id = setTimeout(() => setSearch(value), 300);
     return () => clearTimeout(id);
-  }, [value]);
+  }, [value, setSearch]);
 
   return (
     <input
