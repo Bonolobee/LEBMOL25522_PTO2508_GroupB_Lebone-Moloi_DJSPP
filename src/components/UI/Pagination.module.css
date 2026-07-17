@@ -1,0 +1,19 @@
+.paginationWrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+.pageButton {
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  background-color: #eee;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+.active {
+  background-color: #2563eb;
+  color: white;
+}

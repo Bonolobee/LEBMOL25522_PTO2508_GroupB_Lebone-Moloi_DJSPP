@@ -1,0 +1,44 @@
+.carouselSection {
+  margin: 1rem 0 2rem;
+  padding: 1rem 0;
+}
+
+.carouselSection h2 {
+  margin: 0 0 1rem;
+}
+
+.recommendedCard {
+  display: grid !important;
+  width: calc(100% - 1rem);
+  min-height: 230px;
+  margin: 0 0.5rem;
+  padding: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  text-align: left;
+}
+
+.recommendedCard img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #9ca3af;
+}
+
+.recommendedCard strong {
+  margin-top: 0.75rem;
+}
+
+.carouselSection :global(.slick-prev),
+.carouselSection :global(.slick-next) {
+  z-index: 2;
+}
+
+.carouselSection :global(.slick-prev:before),
+.carouselSection :global(.slick-next:before) {
+  color: var(--text);
+}

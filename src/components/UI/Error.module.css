@@ -1,0 +1,17 @@
+.messageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.error {
+  padding: 1rem 1.5rem;
+  border: 1px solid #f44336;
+  background-color: #ffe5e5;
+  color: #d32f2f;
+  border-radius: 5px;
+  font-weight: bold;
+  max-width: 400px;
+  margin-top: 10%;
+}

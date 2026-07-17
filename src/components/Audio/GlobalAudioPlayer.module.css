@@ -1,0 +1,66 @@
+.playerShell {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 30;
+  display: grid;
+  grid-template-columns: minmax(220px, 360px) 1fr;
+  gap: 1rem;
+  align-items: center;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  padding: 0.65rem 1.5rem;
+  box-shadow: 0 -12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.nowPlaying {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 0.8rem;
+}
+
+.nowPlaying img {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: #9ca3af;
+}
+
+.nowPlaying div {
+  display: grid;
+  min-width: 0;
+}
+
+.nowPlaying strong,
+.nowPlaying span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nowPlaying span {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.playerShell :global(.rhap_container) {
+  box-shadow: none;
+  background: transparent;
+  color: var(--text);
+}
+
+.playerShell :global(.rhap_time),
+.playerShell :global(.rhap_main-controls-button),
+.playerShell :global(.rhap_volume-button) {
+  color: var(--text);
+}
+
+@media (max-width: 720px) {
+  .playerShell {
+    grid-template-columns: 1fr;
+    padding: 0.75rem;
+  }
+}
