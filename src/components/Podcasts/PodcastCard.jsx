@@ -2,6 +2,7 @@ import { formatDate } from "../../utils/formatDate";
 import { useNavigate } from "react-router-dom";
 import styles from "./PodcastCard.module.css";
 import GenreTags from "../UI/GenreTags";
+import PodcastImage from "../UI/PodcastImage";
 
 /**
  * Renders a single podcast preview card with image, title, number of seasons,
@@ -27,7 +28,7 @@ export default function PodcastCard({ podcast }) {
 
   return (
     <div className={styles.card} onClick={() => handleNavigate(podcast)}>
-      <img src={podcast.image} alt={podcast.title} />
+      <PodcastImage src={podcast.image} alt={podcast.title} />
 
       <h3>{podcast.title}</h3>
       <p className={styles.seasons}>{podcast.seasons} seasons</p>

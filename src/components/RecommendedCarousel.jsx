@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { useNavigate } from "react-router-dom";
 import { PodcastContext } from "../context/PodcastContext";
 import GenreTags from "./UI/GenreTags";
+import PodcastImage from "./UI/PodcastImage";
 import styles from "./RecommendedCarousel.module.css";
 
 const settings = {
@@ -40,7 +41,7 @@ export default function RecommendedCarousel() {
             key={show.id}
             onClick={() => navigate(`/show/${show.id}`, { state: { genres: show.genres } })}
           >
-            <img src={show.image} alt={`${show.title} cover`} />
+            <PodcastImage src={show.image} alt={`${show.title} cover`} />
             <strong>{show.title}</strong>
             <GenreTags genres={show.genres.slice(0, 2)} />
           </button>

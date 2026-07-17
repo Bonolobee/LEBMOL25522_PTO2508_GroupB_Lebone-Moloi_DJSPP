@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { PodcastContext } from "../../context/PodcastContext";
 import { formatDate } from "../../utils/formatDate";
 import GenreTags from "../UI/GenreTags";
+import PodcastImage from "../UI/PodcastImage";
 import styles from "./PodcastDetail.module.css";
 
 function createEpisodeRecord(podcast, season, episode) {
@@ -35,7 +36,7 @@ export default function PodcastDetail({ podcast, genres }) {
       </button>
 
       <div className={styles.header}>
-        <img src={podcast.image} alt={`${podcast.title} cover`} className={styles.cover} />
+        <PodcastImage src={podcast.image} alt={`${podcast.title} cover`} className={styles.cover} />
         <div>
           <h1 className={styles.title}>{podcast.title}</h1>
           <p className={styles.description}>{podcast.description}</p>
@@ -71,7 +72,7 @@ export default function PodcastDetail({ podcast, genres }) {
       <div className={styles.seasonDetails}>
         <div className={styles.seasonIntro}>
           <div className={styles.left}>
-            <img className={styles.seasonCover} src={season.image} alt={`${season.title} cover`} />
+            <PodcastImage className={styles.seasonCover} src={season.image} alt={`${season.title} cover`} />
             <div>
               <h3>
                 Season {selectedSeasonIndex + 1}: {season.title}
@@ -100,7 +101,7 @@ export default function PodcastDetail({ podcast, genres }) {
 
             return (
               <div key={episodeRecord.id} className={styles.episodeCard}>
-                <img className={styles.episodeCover} src={season.image} alt="" />
+                <PodcastImage className={styles.episodeCover} src={season.image} alt="" />
                 <div className={styles.episodeInfo}>
                   <p className={styles.episodeTitle}>
                     Episode {episode.episode}: {episode.title}

@@ -76,7 +76,7 @@ Your goal is to build a polished, production-ready React application that offers
 
 - A fully functional and deployed podcast app
 - Source code in **GitHub** with clear commit history
-- Live demo link (**Vercel**)
+- Live demo link: https://podcast-project-rose.vercel.app
 - (Optional) Short demo video
 
 ## 💡 Tips

@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <header className={styles.appHeader}>
       <Link className={styles.brand} to="/">
-        <span aria-hidden="true">◎</span> PodcastApp
+        <span aria-hidden="true">🎙️</span> PodcastApp
       </Link>
 
       <nav className={styles.nav} aria-label="Primary navigation">

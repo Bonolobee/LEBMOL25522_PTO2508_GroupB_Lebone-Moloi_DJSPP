@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Podcast placeholder">
+  <rect width="512" height="512" rx="56" fill="#1f2937"/>
+  <circle cx="256" cy="256" r="134" fill="#fbbf24"/>
+  <rect x="168" y="168" width="176" height="176" rx="24" fill="#111827" opacity="0.9"/>
+  <path d="M210 230c0-25 20-45 46-45h10c26 0 46 20 46 45v58c0 25-20 45-46 45h-10c-26 0-46-20-46-45z" fill="#fbbf24"/>
+  <path d="M220 226c0-20 16-36 36-36s36 16 36 36v58c0 20-16 36-36 36s-36-16-36-36z" fill="#1f2937"/>
+  <circle cx="256" cy="224" r="18" fill="#fbbf24"/>
+  <path d="M212 328c20 24 53 38 92 38s72-14 92-38" stroke="#fbbf24" stroke-width="14" fill="none" stroke-linecap="round"/>
+</svg>

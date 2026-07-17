@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import AudioPlayer from "react-h5-audio-player";
 import { PodcastContext } from "../../context/PodcastContext";
+import PodcastImage from "../UI/PodcastImage";
 import styles from "./GlobalAudioPlayer.module.css";
 
 /**
@@ -14,7 +15,7 @@ export default function GlobalAudioPlayer() {
   return (
     <aside className={styles.playerShell} aria-label="Global audio player">
       <div className={styles.nowPlaying}>
-        <img src={currentEpisode.image} alt="" />
+        <PodcastImage src={currentEpisode.image} alt="" />
         <div>
           <strong>{currentEpisode.title}</strong>
           <span>{currentEpisode.showTitle}</span>

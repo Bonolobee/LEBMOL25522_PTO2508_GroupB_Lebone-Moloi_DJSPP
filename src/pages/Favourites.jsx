@@ -1,5 +1,6 @@
 import { useContext, useMemo, useState } from "react";
 import { PodcastContext } from "../context/PodcastContext";
+import PodcastImage from "../components/UI/PodcastImage";
 import styles from "./Favourites.module.css";
 
 /**
@@ -65,7 +66,7 @@ export default function Favourites() {
           <h2>{showTitle} <span>({episodes.length} episodes)</span></h2>
           {episodes.map((episode) => (
             <article className={styles.item} key={episode.id}>
-              <img src={episode.image} alt="" />
+              <PodcastImage src={episode.image} alt="" />
               <div>
                 <h3>{episode.title}</h3>
                 <p>Season {episode.seasonNumber} • Episode {episode.episodeNumber}</p>
