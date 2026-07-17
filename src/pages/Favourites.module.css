@@ -53,8 +53,9 @@
   margin-bottom: 1rem;
   padding: 1rem;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: var(--card-radius);
   background: var(--surface);
+  box-shadow: var(--shadow);
 }
 
 .item img {
@@ -75,12 +76,13 @@
 
 .actions button {
   border: 0;
-  border-radius: 6px;
+  border-radius: 8px;
   background: var(--button);
   color: var(--buttonText);
   padding: 0.55rem 0.75rem;
   font-weight: 800;
   cursor: pointer;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.08);
 }
 
 .empty {

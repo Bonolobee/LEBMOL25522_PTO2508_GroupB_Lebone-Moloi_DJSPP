@@ -9,9 +9,10 @@
   gap: 1rem;
   align-items: center;
   border-top: 1px solid var(--border);
-  background: var(--surface);
-  padding: 0.65rem 1.5rem;
-  box-shadow: 0 -12px 30px rgba(15, 23, 42, 0.08);
+  background: linear-gradient(180deg, rgba(0,0,0,0.02), transparent), var(--surface);
+  padding: 0.75rem 1.25rem;
+  box-shadow: var(--shadow);
+  border-radius: 8px 8px 0 0;
 }
 
 .nowPlaying {
@@ -46,6 +47,7 @@
   font-size: 0.85rem;
 }
 
+/* Style the react-h5-audio-player controls to match screenshots */
 .playerShell :global(.rhap_container) {
   box-shadow: none;
   background: transparent;
@@ -58,9 +60,29 @@
   color: var(--text);
 }
 
+/* Make play button circular and prominent */
+.playerShell :global(.rhap_main-controls-button) {
+  background: var(--button);
+  color: var(--buttonText);
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.12);
+}
+
+.playerShell :global(.rhap-progress-filled) {
+  background: linear-gradient(90deg, var(--button), rgba(255,255,255,0.2));
+}
+
+.playerShell :global(.rhap_volume-button) {
+  background: transparent;
+}
+
 @media (max-width: 720px) {
   .playerShell {
     grid-template-columns: 1fr;
-    padding: 0.75rem;
+    padding: 0.65rem;
   }
 }

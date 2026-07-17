@@ -3,17 +3,17 @@
   min-height: 100%;
   padding: 1rem;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: var(--card-radius);
   background: var(--surface);
   color: var(--text);
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
 .card:hover {
-  border-color: var(--muted);
-  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
-  transform: translateY(-2px);
+  border-color: rgba(99,102,241,0.06);
+  box-shadow: var(--shadow);
+  transform: translateY(-4px);
 }
 
 .card img {
@@ -37,3 +37,4 @@
 .updatedText {
   font-size: 0.8rem;
 }
+

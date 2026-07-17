@@ -13,8 +13,8 @@ strong {
   gap: 2rem;
   background: var(--surface);
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
   margin-bottom: 2rem;
 }
 .backButton {
@@ -61,15 +61,17 @@ strong {
 }
 
 .genreBadge {
-  background-color: #e5e7eb;
+  background-color: var(--chip);
   padding: 0.3rem 0.75rem;
   border-radius: 9999px;
   font-size: 0.85rem;
+  color: var(--text);
+  border: 1px solid transparent;
 }
 
 .metaInfo p {
   font-size: 0.875rem;
-  color: #555;
+  color: var(--muted);
   margin: 0.25rem 0;
 }
 
@@ -86,10 +88,10 @@ strong {
 }
 
 .seasonDetails {
-  background: white;
+  background: var(--surface);
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
 }
 
 .seasonIntro {
@@ -109,11 +111,13 @@ strong {
 
 .dropdown {
   padding: 0.4rem 0.6rem;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+  border-radius: 6px;
+  border: 1px solid var(--border);
   min-width: 140px;
   height: 40px;
   order: 2;
+  background: var(--surface);
+  color: var(--text);
 }
 
 .seasonCover,
@@ -130,7 +134,7 @@ strong {
 }
 
 .releaseInfo {
-  color: #777;
+  color: var(--muted);
   font-size: 0.875rem;
   margin-top: 0.5rem;
 }
@@ -145,7 +149,7 @@ strong {
   display: flex;
   background: var(--soft);
   padding: 1rem;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border);
   border-radius: 6px;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
@@ -153,8 +157,8 @@ strong {
 .episodeCard:hover {
   transform: translateY(-4px);
   background: var(--surface);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border-color: #d1d5db;
+  box-shadow: var(--shadow);
+  border-color: rgba(0,0,0,0.04);
 }
 .episodeInfo {
   margin-left: 10px;
@@ -180,13 +184,14 @@ strong {
 
 .episodeActions button {
   border: 0;
-  border-radius: 6px;
+  border-radius: 8px;
   background: var(--button);
   color: var(--buttonText);
-  padding: 0.55rem 0.75rem;
+  padding: 0.45rem 0.7rem;
   cursor: pointer;
   font-weight: 800;
   white-space: nowrap;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.08);
 }
 
 @media (max-width: 600px) {
